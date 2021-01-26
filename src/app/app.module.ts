@@ -24,6 +24,7 @@ import { InputComponent } from '../app/shared/input/input.component';
 import { RadioComponent } from '../app/shared/radio/radio.component';
 import { OrderItensComponent } from '../app/order/order-itens/order-itens.component';
 import { OrderService } from './order/order-itens/order.service';
+import { DeliveryCostsComponent } from '../app/order/delivery-costs/delivery-costs.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { OrderService } from './order/order-itens/order.service';
     OrderComponent,
     InputComponent,
     RadioComponent,
-    OrderItensComponent
+    OrderItensComponent,
+    DeliveryCostsComponent
   ],
   imports: [
     BrowserModule,
