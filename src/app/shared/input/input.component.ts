@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, ContentChild, AfterContentInit } from '@angular/core';
-import {NgModel} from '@angular/forms';
+import {FormControlName, NgModel} from '@angular/forms';
 
 @Component({
   selector: 'mt-input-container',
@@ -13,6 +13,7 @@ export class InputComponent implements OnInit {
   errorMessage: string
 
   @ContentChild(NgModel) model: NgModel
+  @ContentChild(FormControlName) control: FormControlName
 
   constructor() { }
 
@@ -20,7 +21,7 @@ export class InputComponent implements OnInit {
   }
 
   ngAfterContentInit(){
-    this.input = this.model
+    this.input = this.model || this.control
     if(this.input === undefined){
       throw new Error('Erro')
       
